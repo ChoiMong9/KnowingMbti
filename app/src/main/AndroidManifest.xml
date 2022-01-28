@@ -9,6 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KnowingMbtiFlower">
+        <activity android:name=".test12"></activity>
+        <activity android:name=".test11" />
+        <activity android:name=".test10" />
+        <activity android:name=".test9" />
+        <activity android:name=".test8" />
+        <activity android:name=".test7" />
+        <activity android:name=".test6" />
+        <activity android:name=".test5" />
+        <activity android:name=".test4" />
+        <activity android:name=".test3" />
+        <activity android:name=".test2" />
+        <activity android:name=".result_main" />
+        <activity android:name=".TestActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
