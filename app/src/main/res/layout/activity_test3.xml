@@ -9,32 +9,41 @@
     <TextView
         android:id="@+id/qaTextview3"
         android:layout_width="274dp"
-        android:layout_height="71dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="93dp"
         android:gravity="center_horizontal|center_vertical"
-        android:text=" 질문들 넣어놓는칸 "
+        android:text="@string/test_3_Q"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="93dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/test3btn"
         android:layout_width="275dp"
-        android:layout_height="55dp"
-        android:text="Button"
+        android:layout_height="58dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="64dp"
+        android:text="@string/test_3_A1"
         app:backgroundTint="#DAA2A2"
-        tools:layout_editor_absoluteX="72dp"
-        tools:layout_editor_absoluteY="296dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/qaTextview3" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/test3btn2"
         android:layout_width="279dp"
         android:layout_height="58dp"
-        android:text="Button"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="61dp"
+        android:text="@string/test_3_A2"
         app:backgroundTint="#DAA2A2"
-        tools:layout_editor_absoluteX="71dp"
-        tools:layout_editor_absoluteY="411dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/test3btn" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton3"
