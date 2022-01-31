@@ -84,8 +84,8 @@ class result_main : AppCompatActivity() {
             MyImage.setImageResource(R.drawable.isfj)
             flowerName.text="개나리"
             flowerText.text="꽃말 : 희망, 기대, 깊은 정, 달성\n따사로운 개나리와 같이 따뜻한 마음씨를 가졌어요.\n공감 능력이 뛰어나며 안정과 평온을 중시해요.\n하지만 개나리의 줄기 속이 비어 있듯이 본인의 속내를 잘 드러내진 않아요.\n참고 참다 크게 터질 수 있으니 평소에 감정을 너무 억압하진 않는 게 좋겠어요.\n끈기 있고 성실하며 목표가 옳은 일이라면 그 목표를 달성하기 위해 열정적으로 행동하는 편이에요."
-            flowerGood.setImageResource(R.drawable.esfp)
-            goodName.text="히어리"
+            flowerGood.setImageResource(R.drawable.estp)
+            goodName.text="만리화"
             flowerBad.setImageResource(R.drawable.enfp)
             badName.text="동백"
         }
