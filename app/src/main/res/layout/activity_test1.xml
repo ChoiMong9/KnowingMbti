@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TestActivity">
+    android:background="@drawable/background"
+    tools:context=".test1">
 
     <TextView
         android:id="@+id/qaTextview"
@@ -12,9 +13,11 @@
         android:layout_height="71dp"
         android:layout_marginTop="93dp"
         android:layout_marginBottom="132dp"
+        android:fontFamily="@font/fontfont"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/test_1_Q"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/test1btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.518"
@@ -28,9 +31,13 @@
         android:layout_marginStart="72dp"
         android:layout_marginTop="132dp"
         android:layout_marginEnd="64dp"
+        android:background="@drawable/ans"
+        android:fontFamily="@font/fontfont"
+        android:src="@drawable/ans"
         android:text="@string/test_1_A1"
-        android:textSize="12sp"
-        app:backgroundTint="#DAA2A2"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        app:backgroundTint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/qaTextview" />
@@ -40,11 +47,15 @@
         android:layout_width="279dp"
         android:layout_height="58dp"
         android:layout_marginStart="71dp"
+        android:fontFamily="@font/fontfont"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="61dp"
+        android:background="@drawable/ans"
+        android:src="@drawable/ans"
         android:text="@string/test_1_A2"
-        android:textSize="12sp"
-        app:backgroundTint="#DAA2A2"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        app:backgroundTint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/test1btn" />
@@ -54,13 +65,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="48dp"
         android:clickable="true"
         android:tint="#FFFFFF"
-        app:backgroundTint="#DAA2A2"
+        app:backgroundTint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_revert" />
+        app:srcCompat="@drawable/back" />
 
     <TextView
         android:id="@+id/textView"
@@ -68,8 +79,30 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="116dp"
         android:layout_marginBottom="64dp"
+        android:fontFamily="@font/fontfont"
         android:text="뒤로가기를 원하시면 눌러주세요."
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="409dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="640dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/down" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="640dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/up" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

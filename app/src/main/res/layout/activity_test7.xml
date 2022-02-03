@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".test7">
 
     <TextView
@@ -13,6 +14,8 @@
         android:layout_marginTop="93dp"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/test_7_Q"
+        android:fontFamily="@font/fontfont"
+        android:textSize="30sp"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.518"
@@ -26,8 +29,12 @@
         android:layout_marginStart="72dp"
         android:layout_marginTop="108dp"
         android:layout_marginEnd="64dp"
+        android:background="@drawable/ans"
+        android:fontFamily="@font/fontfont"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        app:backgroundTint="#FFFFFF"
         android:text="@string/test_7_A1"
-        app:backgroundTint="#DAA2A2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/qaTextview7" />
@@ -39,8 +46,12 @@
         android:layout_marginStart="71dp"
         android:layout_marginTop="57dp"
         android:layout_marginEnd="61dp"
+        android:background="@drawable/ans"
+        android:fontFamily="@font/fontfont"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        app:backgroundTint="#FFFFFF"
         android:text="@string/test_7_A2"
-        app:backgroundTint="#DAA2A2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/test7btn" />
@@ -53,10 +64,10 @@
         android:layout_marginBottom="44dp"
         android:clickable="true"
         android:tint="#FFFFFF"
-        app:backgroundTint="#DAA2A2"
+        app:backgroundTint="#FFFFFF"
+        app:srcCompat="@drawable/back"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_revert" />
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <TextView
         android:id="@+id/textView13"
@@ -64,7 +75,29 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="116dp"
         android:layout_marginBottom="64dp"
+        android:fontFamily="@font/fontfont"
         android:text="뒤로가기를 원하시면 눌러주세요."
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="409dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="640dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/down" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="640dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/up" />
 </androidx.constraintlayout.widget.ConstraintLayout>

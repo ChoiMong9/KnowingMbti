@@ -41,6 +41,12 @@ class test6 : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         when(v?.id){
             R.id.test6btn -> {//1번 질문을 눌렀을 때
+                //업데이트전 mbti상태 인텐트로 보내기
+                val intent = Intent(this, test7::class.java)
+                intent.putExtra("intent_sensing",sensing)
+                intent.putExtra("intent_iNtuition",iNtuition)
+
+                //해당 mbti변수 증가시키기
                 sqlitedb=dbManager.writableDatabase
                 sqlitedb.execSQL("UPDATE mbti SET sensing=sensing+1;")
                 sqlitedb.close()
@@ -60,12 +66,15 @@ class test6 : AppCompatActivity(), View.OnClickListener {
                 dbManager.close()
 
                 //화면전환
-                val intent = Intent(this, test7::class.java)
                 startActivity(intent)
-                intent.putExtra("intent_sensing",sensing)
-                intent.putExtra("intent_iNtuition",iNtuition)
             }
             R.id.test6btn2 -> {//2번 질문을 눌렀을 때
+                //업데이트전 mbti상태 인텐트로 보내기
+                val intent = Intent(this, test7::class.java)
+                intent.putExtra("intent_sensing",sensing)
+                intent.putExtra("intent_iNtuition",iNtuition)
+
+                //해당 mbti변수 증가시키기
                 sqlitedb=dbManager.writableDatabase
                 sqlitedb.execSQL("UPDATE mbti SET iNtuition=iNtuition+1;")
                 sqlitedb.close()
@@ -85,10 +94,7 @@ class test6 : AppCompatActivity(), View.OnClickListener {
                 dbManager.close()
 
                 //화면전환
-                val intent = Intent(this, test7::class.java)
                 startActivity(intent)
-                intent.putExtra("intent_sensing",sensing)
-                intent.putExtra("intent_iNtuition",iNtuition)
             }
             R.id.floatingActionButton6 -> {//뒤로가기 버튼을 눌렀을 때
                 //이번 액티비티에서 선택되기 전 액티비티 상태로 업데이트

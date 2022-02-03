@@ -22,8 +22,8 @@ class test7 : AppCompatActivity(), View.OnClickListener {
     var feeling : Int = 0
 
     //전 액티비티 인텐트 변수
-    var pthinking : Int = 0
-    var pfeeling : Int = 0
+    var psensing : Int = 0
+    var piNtuition : Int = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test7)
@@ -41,6 +41,12 @@ class test7 : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         when(v?.id){
             R.id.test7btn -> {//1번 질문을 눌렀을 때
+                //업데이트전 mbti상태 인텐트로 보내기
+                val intent = Intent(this, test8::class.java)
+                intent.putExtra("intent_thinking",thinking)
+                intent.putExtra("intent_feeling",feeling)
+
+                //해당 mbti변수 증가시키기
                 sqlitedb=dbManager.writableDatabase
                 sqlitedb.execSQL("UPDATE mbti SET thinking=thinking+1;")
                 sqlitedb.close()
@@ -60,12 +66,15 @@ class test7 : AppCompatActivity(), View.OnClickListener {
                 dbManager.close()
 
                 //화면전환
-                val intent = Intent(this, test8::class.java)
                 startActivity(intent)
-                intent.putExtra("intent_thinking",thinking)
-                intent.putExtra("intent_feeling",feeling)
             }
             R.id.test7btn2 -> {//2번 질문을 눌렀을 때
+                //업데이트전 mbti상태 인텐트로 보내기
+                val intent = Intent(this, test8::class.java)
+                intent.putExtra("intent_thinking",thinking)
+                intent.putExtra("intent_feeling",feeling)
+
+                //해당 mbti변수 증가시키기
                 sqlitedb=dbManager.writableDatabase
                 sqlitedb.execSQL("UPDATE mbti SET feeling=feeling+1;")
                 sqlitedb.close()
@@ -85,18 +94,15 @@ class test7 : AppCompatActivity(), View.OnClickListener {
                 dbManager.close()
 
                 //화면전환
-                val intent = Intent(this, test8::class.java)
                 startActivity(intent)
-                intent.putExtra("intent_thinking",thinking)
-                intent.putExtra("intent_feeling",feeling)
             }
             R.id.floatingActionButton7 -> {//뒤로가기 버튼을 눌렀을 때
                 //이번 액티비티에서 선택되기 전 액티비티 상태로 업데이트
-                pthinking=intent.getIntExtra("intent_thinking",0)
-                pfeeling=intent.getIntExtra("intent_feeling",0)
+                psensing=intent.getIntExtra("intent_sensing",0)
+                piNtuition=intent.getIntExtra("intent_iNtuition",0)
 
                 sqlitedb=dbManager.writableDatabase
-                sqlitedb.execSQL("UPDATE mbti SET thinking="+pthinking+", feeling="+pfeeling+";")
+                sqlitedb.execSQL("UPDATE mbti SET sensing="+psensing+", iNtuition="+piNtuition+";")
                 sqlitedb.close()
 
                 //이전 액티비티로 전환

@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 
@@ -20,7 +21,7 @@ class result_main : AppCompatActivity() {
     lateinit var flowerBad : ImageView
     lateinit var goodName : TextView
     lateinit var badName : TextView
-    lateinit var restartBtn : Button
+    lateinit var restartBtn : ImageButton
 
     var extra : Int = 0
     var intro : Int = 0

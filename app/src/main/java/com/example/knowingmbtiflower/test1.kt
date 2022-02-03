@@ -47,6 +47,7 @@ class test1 : AppCompatActivity(), View.OnClickListener{
     override fun onClick(v: View?) {
         when(v?.id){
             R.id.test1btn -> {//1번 질문을 눌렀을 때
+                //해당 mbti변수 증가시키기
                 sqlitedb=dbManager.writableDatabase
                 sqlitedb.execSQL("UPDATE mbti SET extra=extra+1;")
                 sqlitedb.close()
@@ -74,6 +75,7 @@ class test1 : AppCompatActivity(), View.OnClickListener{
 
             }
             R.id.test1btn2 -> {//2번 질문을 눌렀을 때
+                //해당 mbti변수 증가시키기
                 sqlitedb=dbManager.writableDatabase
                 sqlitedb.execSQL("UPDATE mbti SET intro=intro+1;")
                 sqlitedb.close()
